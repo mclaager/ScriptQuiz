@@ -27,7 +27,7 @@ ODD BALL:	General, I now is to fights the appearance
 ANAKIN:		Game time started	
 OBI-WAN:	Our dichotomy opens the combat	
 
-CLONE: 		He is in my behind
+CLONE:		He is in my behind
 ANAKIN:		My distance his half kilometer
 OBI-WAN:	Not, let I to solve him
 
@@ -56,7 +56,7 @@ OBI-WAN:	We must fly into the enemy's commander airship finds
 
 OBI-WAN:	Good kind of
 
-OBI-WAN: 	Do not beat, you can not help me like this
+OBI-WAN:	Do not beat, you can not help me like this
 ANAKIN:		I agree, my method is not so good
 
 OBI-WAN:	Is really to bother
@@ -989,7 +989,7 @@ PALPATINE:	Good of good
 			There is this power
 			You the meeting was called by the person
 			Reaching the west of reaches
-VADER:		Thank, teacher
+ANAKIN:		Thank, teacher
 PALPATINE:	Get up
 
 PALPATINE:	Young person, since the Presbyterian Church does
@@ -1265,10 +1265,10 @@ OBI-WAN:	The peaceful willing to is the child's father, is
 
 
 <PADME'S SHIP>
-BAIL:		Lady, let me accompany you to go to
+TYPHO:		Lady, let me accompany you to go to
 PADME:		Can't in danger of
 			Let myself going to this is the private matter
-BAIL:		Literally you, lady
+TYPHO:		Literally you, lady
 			But I agree you in no case like this
 PADME:		I can't have problems of captain
 			This is the matter that I must personally
@@ -1506,7 +1506,7 @@ YODA:		There is an old friend academic association the
 
 <BAIL IN ANOTHER PART OF THE SHIP>
 BAIL:		This with in captain
-CAPTAIN:	Is
+ANTILLES:	Is
 BAIL:		These childses hands over to you to take care of
 			Like to like to look after them
 			Clean them
