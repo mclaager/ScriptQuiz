@@ -24,8 +24,8 @@ ODD BALL:	receive
 OBI-WAN:	I are above at you four machine am after death at me
 ODD BALL:	General, I now is to fights the appearance
 
-ANAKIN:		Game time started	
-OBI-WAN:	Our dichotomy opens the combat	
+ANAKIN:		Game time started
+OBI-WAN:	Our dichotomy opens the combat
 
 CLONE:		He is in my behind
 ANAKIN:		My distance his half kilometer
@@ -37,7 +37,7 @@ ANAKIN:		Led to bounce back
 
 OBI-WAN:	Like, reach the man, Good good good let us counter-attacking
 
-ANAKIN: 	You remain on standby I use the backset equips
+ANAKIN:		You remain on standby I use the backset equips
 
 ANAKIN:		Two fix together
 
@@ -184,7 +184,7 @@ DOOKU:		Even since you I separate
 			I has been hating you
 			You are a sacrifice article that I cut up rough now
 
-<ANAKIN DISARMS DOOKU>		
+<ANAKIN DISARMS DOOKU>
 PALPATINE:	Very good, the ratio is prosperous, very good
 			Killed him, now killed him
 ANAKIN:		I can't
@@ -225,7 +225,7 @@ CAPTAIN:	Stabilize the airship
 
 GRIEVOUS:	Start all engines
 
-ANAKIN:		Relax, this circumstance we saw many 
+ANAKIN:		Relax, this circumstance we saw many
 OBI-WAN:	Slow, that is what?
 
 ANAKIN:		R2. R2, let elevator stopped
@@ -233,7 +233,7 @@ OBI-WAN:	A day after the fair jump quickly
 
 OBI-WAN:	See can also must not find out the exit
 			The airship returns at fly
-ANAKIN:		R2, come down here	
+ANAKIN:		R2, come down here
 
 PILOT BD:	Superior, they have escaped a day after the fair
 GRIEVOUS:	I should really feeds you all dog
@@ -262,19 +262,19 @@ COMMAND BD:	Welcome you
 GRIEVOUS:	Just hopeless situation warrior
 			I think is what somebody
 			Intruded in to come
-ANAKIN:		Space general, you and not equal to I think severe	
-GRIEVOUS:	Smelly boy	
+ANAKIN:		Space general, you and not equal to I think severe
+GRIEVOUS:	Smelly boy
 OBI-WAN:	We still have the mission you do not ask for the him
 GRIEVOUS:	Don't you ever think to discovers here from I clues
 OBI-WAN:	This time we have no this plan
 			The this time your turn escaped
 ANAKIN:		R2
 
-<ANAKIN AND OBI-WAN ESCAPE CUSTODY AND ATTACK BRIDGE CREW>	
+<ANAKIN AND OBI-WAN ESCAPE CUSTODY AND ATTACK BRIDGE CREW>
 GRIEVOUS: 	Batter to death them
 GRIEVOUS:	Batter to death them
 
-GRIEVOUS:	Batter to death them	
+GRIEVOUS:	Batter to death them
 
 GRIEVOUS:	Leave he, run quickly		
 
@@ -318,7 +318,7 @@ OBI-WAN:	, not, I am uninterested to politics
 			Your peace negotiations makes progress to go to all right
 			And, you have the prospect very much, you go in
 ANAKIN:		Etc. , it is your idea that one of this rescue
-OBI-WAN:	You do not forget, gold	
+OBI-WAN:	You do not forget, gold
 			Is you rescued the speaker is you killed the
 			Is you saved I return to carry on the back me a dangerous
 ANAKIN:		But I am all to is trained by you
@@ -350,8 +350,8 @@ C3PO:		Hear, they must not do so
 
 ANAKIN:		The war will continue unless grasp the general
 BAIL:		But I will do my the whole effort
-ANAKIN:		Walk first one step, 
-BAIL:		Sir	
+ANAKIN:		Walk first one step,
+BAIL:		Sir
 
 
 <PADME TELLS ANAKIN SHE IS PREGNANT>
@@ -374,7 +374,7 @@ ANAKIN:		Are you O. K.
 PADME:		Waiting for the happy event condescends to come
 			Dear, I was pregnant
 ANAKIN:		This... ...
-			This is really too stick	
+			This is really too stick
 PADME:		We should how do
 ANAKIN:		I no longer worried the other thing now
 			Good
@@ -382,7 +382,7 @@ ANAKIN:		I no longer worried the other thing now
 			The most happy time of inside of whole life
 
 
-<GRIEVOUS ARRIVES ON UTAPAU AND SPEAKS WITH SIDIOUS>	
+<GRIEVOUS ARRIVES ON UTAPAU AND SPEAKS WITH SIDIOUS>
 GRIEVOUS:	I came, west emperor
 SIDIOUS:	Space general I suggest you have the abruption
 			All concentrates to transfer the wood method star
@@ -401,14 +401,14 @@ PADME:		I living the child's time you must at home
 			It has a great father
 			A great hopeless situation warrior
 ANAKIN:		The beauty that you are like this
-PADME:		I let me become the beauty to your love	
+PADME:		I let me become the beauty to your love
 ANAKIN:		Not, I love you love deeper
 PADME:		Your meaning is a love to tie up you
 ANAKIN:		That is not my meaning
 PADME:		At least I say to half
 
 <ANAKIN'S NIGHTMARE>
-(PADME):	Return my baby
+PADME:		Return my baby
 
 PADME:		You is missing what
 ANAKIN:		Nothing important
@@ -426,7 +426,7 @@ ANAKIN:		You died at the time of livinging the child
 PADME:		Is that baby on the hoof?
 ANAKIN:		Do not know
 PADME:		Just a dream is just
-ANAKIN:		I do not hope this dream true	
+ANAKIN:		I do not hope this dream true
 PADME:		Our baby will change our life
 			The queen will continue to allow us as her loyal to
 			Then speaker his... ...
@@ -440,7 +440,7 @@ ANAKIN:		I do not need the child's help
 YODA:		Pregnancy? Pregnancy
 			After all does the dream arrived the what kind of
 ANAKIN:		Pain and sufferings ache, death
-YODA:		Your oneself? Or person whom you know?			
+YODA:		Your oneself? Or person whom you know?
 ANAKIN:		Other people
 YODA:		Intimate person
 ANAKIN:		Yes
@@ -505,11 +505,11 @@ ANAKIN:		I understood
 MACE:		You entered the parliament we do not give the the title
 ANAKIN:		What?
 			Can be how like this
-			Like this too wide of the mark		
+			Like this too wide of the mark
 			Like this inequity
 			I can how belong to the parliament but is not
 MACE:		You sit down first young a line
-ANAKIN:		Forgive me, elder	
+ANAKIN:		Forgive me, elder
 
 <JEDI COUNCIL DISCUSSES WAR>
 MUNDI:		We have investigated of the republic is systematic		
@@ -517,23 +517,23 @@ MUNDI:		We have investigated of the republic is systematic
 YODA:		To find out the space general
 			You must search for the outer circle system
 OBI-WAN:	We have no superfluous airship
-MUNDI:		Do not send out the air tank why		
+MUNDI:		Do not send out the air tank why
 MACE:		Send out right away the tank go there very important
-OBI-WAN:	He cans say that again that system is very	
+OBI-WAN:	He cans say that again that system is very
 YODA:		Let me going to, I relate to with new hands quite good	
 MACE:		That come to a decision so
 			The master of helps the republic troops
 			Send these troopseses only
 
 
-<OBI-WAN ASKS ANAKIN TO SPY ON PALPATINE> 
+<OBI-WAN ASKS ANAKIN TO SPY ON PALPATINE>
 ANAKIN:		Is really boring
 			Let me enter the parliament do not let me
 			Have no on the republic history such
 OBI-WAN:	Town young man you thered has been
 			You are so young and then enter the parliament have
 			In reality, you the relation of long peace
-			The parliament do not like you like this		
+			The parliament do not like you like this
 ANAKIN:		I swear to you, I did not call the D of adjust
 OBI-WAN:	But that exactly you want of
 			You must make him doing so with his comity
@@ -542,19 +542,19 @@ OBI-WAN:	The argument agrees the speaker puts you into unique
 			Parliament all the member trusts you
 ANAKIN:		Does that how is again?
 OBI-WAN:	And I stands in your part I do not want to make
-ANAKIN:		What circumstances?		
+ANAKIN:		What circumstances?
 OBI-WAN:	The parliament wants to let you keep watch
 			They want to know him at fuck
 
 ANAKIN:		They want to let do I be the spy?
 			That is to rebels!
-OBI-WAN:	This is the war, gold		
+OBI-WAN:	This is the war, gold
 
-ANAKIN:		Give me this mission in the parliament why	
-OBI-WAN:	This mission is clandestine		
-ANAKIN:		Speaker D and is not a bad person		
+ANAKIN:		Give me this mission in the parliament why
+OBI-WAN:	This mission is clandestine
+ANAKIN:		Speaker D and is not a bad person
 			Even since I came here he is friendly to me
-OBI-WAN:	So you must help us		
+OBI-WAN:	So you must help us
 			gold, our faith believes in our religion
 			But is not to believe in a certain person
 			He wants to make an effort long hours occupy
@@ -586,7 +586,7 @@ ANAKIN:		Sometimes I too so after all the republic was how
 			That war has no well arranged order to disrupt the republic
 PADME:		You had to think perhaps we stands at the bad person's part		
 ANAKIN:		You are what mean
-PADME:		Why we loyal to democracy nonexistent any further?		
+PADME:		Why we loyal to democracy nonexistent any further?
 			Why republic a war machine at demolish everything?
 ANAKIN:		I dare not believe
 			Your tone resembles an abruption doctrine
@@ -628,7 +628,7 @@ PALPATINE:	You are affirmative to have doubted
 ANAKIN:		I not think so
 PALPATINE:	gold, careful want
 			You understand of, to
-ANAKIN:		I know that they do not believe you	
+ANAKIN:		I know that they do not believe you
 PALPATINE:	To, all councilmans whole republic
 ANAKIN:		Our cognition hereafter one of my thought
 PALPATINE:	Why
@@ -644,7 +644,7 @@ PALPATINE:	Justice to see from which apsects see
 			Include to look forward to to the right
 ANAKIN:		But the west emperor depends on the improbity
 			They consider the oneself only
-PALPATINE:	I also belong to the hopeless situation Presbyterian	
+PALPATINE:	I also belong to the hopeless situation Presbyterian
 ANAKIN:		Hopeless situation elder should be to have no private
 			They only concern other people
 
@@ -655,7 +655,7 @@ PALPATINE:	I think to be too is not
 			I think that the hopeless situation elder also can't
 			That is a legend
 			Reaching the man cloth space is the emperor
-			He is so strong and big 
+			He is so strong and big
 			He even can use the original dint to create life
 			He is very deep to black influence understanding
 ANAKIN:		In fact he can come back from the brink of death
@@ -673,7 +673,7 @@ PALPATINE:	Do not do the hopeless situation elder can
 
 
 <YODA TALKS WITH JEDI COUNCIL/BATTLE OF KASHYYYK BEGINS>
-CLONE:		We are republicans soldier	
+CLONE:		We are republicans soldier
 
 MUNDI:		The space general hasn't appeared
 ANAKIN:		The information expresses the space general
@@ -689,8 +689,8 @@ MUNDI:		I think the card ratio can go to
 YODA:		I agree
 MACE:		Very good, parliament Sir
 
-GREE:		We were already the whole is to ready	
-YODA:		The current time arrived commanding officer	
+GREE:		We were already the whole is to ready
+YODA:		The current time arrived commanding officer
 GREE:		Yes, master
 
 
@@ -700,10 +700,10 @@ OBI-WAN:	I agree
 			Ignore at the beginning noisy how
 			The result is always like this
 ANAKIN:		Master I let you disappointing
-			I feel grateful you very much to my cultivation	
+			I feel grateful you very much to my cultivation
 			I always eyes inside no man I apologize to you
 			I was just made by the Presbyterian Church
-OBI-WAN:	You are very strong very astute I feel the pride	
+OBI-WAN:	You are very strong very astute I feel the pride
 			You still a child's time I did your teacher
 			I learn the whole life to all to teach to you
 			And you also became greater than what I hope
@@ -717,7 +717,7 @@ OBI-WAN:	Saw again, my friend
 
 <OBI-WAN AND CODY TALK BEFORE OBI-WAN HEADS TO UTAPAU>
 CODY:		Unfortunate of is great majority city all
-			On the pimping mainland in this area	
+			On the pimping mainland in this area
 OBI-WAN:	At you before arriving I will have been leading	
 			But you did not drag along too long
 CODY:		You trust, we let you disappointing never
@@ -726,22 +726,22 @@ OBI-WAN:	That liked too only wish before you arrive
 
 
 <ANOTHER ANAKIN NIGHTMARE AND TALK WITH PADME ABOUT DYING>
-(OBI-WAN):	Keep your energy do not abandon forever	
+OBI-WAN:	Keep your energy do not abandon forever
 
 ANAKIN:		Ratio the tile comes here
 PADME:		come this morning come
-ANAKIN:		He how 
+ANAKIN:		He how
 PADME:		he is worrying you
 			He says that you bear the very big pressure certainly
-ANAKIN:		I feel to be fond of the very much 
-PADME:		fan	
+ANAKIN:		I feel to be fond of the very much
+PADME:		fan
 			What mean
 ANAKIN:		ratio tile with Presbyterian Church all distrust
 PADME:		They use their life letter term you
 ANAKIN:		Some matters took place
 			I can not become the hopeless situation that
-			I do not want that just keeps present condition	
-PADME:		You are too high to own expectation value	
+			I do not want that just keeps present condition
+PADME:		You are too high to own expectation value
 
 ANAKIN:		I found out to save your method
 PADME:		Save me
@@ -758,15 +758,15 @@ MEDON:		Please accept my salute great hopeless situation
 			We this faraway place
 OBI-WAN:	Very unfortunate because of war
 MEDON:		Unless you take to come over can't have the war here
-OBI-WAN:	I want to ask you to grant	
-			Can let us get the some fuel	
+OBI-WAN:	I want to ask you to grant
+			Can let us get the some fuel
 			Then for matching with the space in not the general
-			I want to regard as your city to our base	
+			I want to regard as your city to our base
 
 <MEDON TELLS OBI-WAN GRIEVOUS IS KEEPING HIS CITY HOSTAGE>
 MEDON:		Here we follows hostage just like
 			Someone is keeping watch on us
-OBI-WAN:	I am complete understand		
+OBI-WAN:	I am complete understand
 MEDON:		Only have a little bit the immodesty we all lose
 OBI-WAN:	Tell your people to seek the refuge shelter quickly
 			If you have the warrior kill the time of the arrived
@@ -786,20 +786,20 @@ GRIEVOUS:	However you only is foolish on this star
 GUNRAY:		You is safe
 			Safety prime minister you think only of to flee for
 			We may be how safe I doubt very much can guarantee
-GRIEVOUS:	Please believe me hear my words you would the high	
+GRIEVOUS:	Please believe me hear my words you would the high
 			Your ship have too arrived
 
 
 <OBI-WAN GREETS GRIEVOUS>
 OBI-WAN:	Everybody is good
 GRIEVOUS:	Section ratio general
-			You is really a day of brave	
+			You is really a day of brave
 			Killed him
 
 GRIEVOUS:	You rolls a little bit far
 			Let old man come to dealt with this hopeless
 OBI-WAN:	You are the man of you were played with
-GRIEVOUS:	I once in your hopeless situation encampment	
+GRIEVOUS:	I once in your hopeless situation encampment
 
 GRIEVOUS:	Come, section ratio
 
@@ -809,7 +809,7 @@ OBI-WAN:	I can not think so
 
 
 <MACE TELLS ANAKIN TO TELL PALPATINE ABOUT OBI-WAN>
-CODY:		Master they proceeded to interfere 
+CODY:		Master they proceeded to interfere
 			The section compares the general with space
 			We are fights with the soldier
 MACE:		Thank you, commanding officer
@@ -830,22 +830,22 @@ YODA:		The dark power is more and more strong
 ANAKIN:		Prime minister
 			I just receive the report that section
 			He is in handle with space not the general
-PALPATINE:	That is a big challenge in	
-ANAKIN:		I should with he together	
-PALPATINE:	The Presbyterian Church like enjoys you not	
+PALPATINE:	That is a big challenge in
+ANAKIN:		I should with he together
+PALPATINE:	The Presbyterian Church like enjoys you not
 			You not strange do they do not seal you as the
-ANAKIN:		I hope me to know	
+ANAKIN:		I hope me to know
 			I feel more and more I was been isolated by this
 
-ANAKIN:		I know that still have an esse for they having			
-PALPATINE:	They distrust you Allah gold			
-			They foresaw your future	
-			They know that your power will big outrun	
+ANAKIN:		I know that still have an esse for they having		
+PALPATINE:	They distrust you Allah gold
+			They foresaw your future
+			They know that your power will big outrun
 			This will be an unprecedented affair
 
-PALPATINE:	Please let me to help you to the deeply thought			
-ANAKIN:		You are what how can anyone know this power	
-PALPATINE:	My tutor tells me an affair concerning it		
+PALPATINE:	Please let me to help you to the deeply thought		
+ANAKIN:		You are what how can anyone know this power
+PALPATINE:	My tutor tells me an affair concerning it
 			Even include the innate character of the dark
 ANAKIN:		You know the dark
 PALPATINE:	Allah gold, if a person wants to comprehend
@@ -857,12 +857,12 @@ PALPATINE:	Allah gold, if a person wants to comprehend
 			You only ask for help me then can become the
 
 PALPATINE:	The knowledge of the dark of the study hopeless
-			In the fire of water	
+			In the fire of water
 ANAKIN:		You say what
 PALPATINE:	I begged you using my knowledge
 
 <ANAKIN IGNITES LIGHTSABER>
-ANAKIN:		You are the governor of this city	
+ANAKIN:		You are the governor of this city
 PALPATINE:	I know is what make you feeling vexed
 			Hearing me says
 			Do not hope that rotting hopeless situation
@@ -874,13 +874,13 @@ PALPATINE:	I know is what make you feeling vexed
 PALPATINE:	Do you want to kill me
 ANAKIN:		I think certainly
 PALPATINE:	I know
-			I can feel your exasperation	
+			I can feel your exasperation
 			It let you concentrating on
-			Also make you stronger	
+			Also make you stronger
 
 ANAKIN:		I will tell the hopeless situation Presbyterian
 PALPATINE:	Certainly, you should this
-			But your indetermination they will disdain	
+			But your indetermination they will disdain
 ANAKIN:		I am very quick and then will find out the
 PALPATINE:	You have got the outstanding intelligence
 			Your intelligence may let you understanding the power
@@ -1297,7 +1297,7 @@ PADME:		He says a member that you become dark world
 			Say you at kill the child
 ANAKIN:		The ratio wants to let you leave me
 PADME:		He concerns us very much
-ANAKIN:		We?	
+ANAKIN:		We?
 PADME:		He has known
 			He wants to help you
 			The peaceful is willing to I a hope gets your love
