@@ -8,6 +8,9 @@
 
 // Has to be at least 20
 #define LINE_SIZE 500
+// The number of attempts an otherwise infinite loop will take
+// (Should be at least equal to maximum number of responses)
+#define ATTEMPTS 20
 
 // Macro to allow using LINE_SIZE in format string
 // https://stackoverflow.com/questions/12844117/printing-defined-constants
@@ -27,15 +30,18 @@ typedef struct Question
 // Function prototypes
 void err (char *str);
 char toLower (char c);
+int isWhiteSpace (char c);
 int isAlphaNumeric (char c);
 char cleanResponse (char *str);
 int numOfLines (char *filename);
 void compileScript (char **script, char *filename, int lineCount);
 void freeScript(char **script, int lineCount);
+void removeTrailingWhitespace (Question *q);
 Question *createQuestion (char **script, int lineCount, int line_num);
 Question *findQuestion (char **script, int lineCount, int diffLineNum);
+int isValidAnswerChoice (Question *q, Question **q_choices, int i);
 int askQuestion (char **script, int lineCount, int question_num, int num_responses, int diffFlag);
-void playQuiz (char *name, char **script, int lineCount, int num_questions, int num_responses, int diffFlag);
+void playQuiz (char **script, int lineCount, char *name, int num_questions, int num_responses, int diffFlag);
 
 
 // Will display an error message and then exit the program
@@ -64,6 +70,12 @@ int isAlphaNumeric (char c)
 	if (c >= '0' && c <= '9')
 		return 1;
 	return 0;
+}
+
+// Tests for whitespace
+int isWhiteSpace (char c)
+{
+	return c == ' ' || c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r';
 }
 
 // Converts a user response string into an answer, '\0' (0) if no answer could be determined
@@ -143,8 +155,33 @@ void freeScript(char **script, int lineCount)
 		return;
 	
 	for (i = 0; i < lineCount; i++)
-		free(script[i]);
+		if (script[i] != NULL)
+			free(script[i]);
 	free(script);
+	
+	return;
+}
+
+// Removes trailing whitespace from a quetion
+void removeTrailingWhitespace (Question *q)
+{
+	int i, j = -1;
+	
+	if (q == NULL)
+		return;
+	
+	// Removes trailing whitespace from the quote
+	for (i = 0; (q->quote)[i] != '\0'; i++)
+		if (!isWhiteSpace((q->quote)[i]))
+			j = i;
+	(q->quote)[j+1] = '\0';
+	
+	// Removes trailing whitespace from the next quote
+	j = -1;
+	for (i = 0; (q->next_quote)[i] != '\0'; i++)
+		if (!isWhiteSpace((q->next_quote)[i]))
+			j = i;
+	(q->next_quote)[j+1] = '\0';
 	
 	return;
 }
@@ -164,7 +201,7 @@ Question *createQuestion (char **script, int lineCount, int line_num)
 		return NULL;
 	
 	// Tests if the line itself is a quote
-	if (!isAlphaNumeric(script[line_num][0]) && script[line_num][0] != '\t')
+	if (!isAlphaNumeric(script[line_num][0]) && (script[line_num][0] != '\t' || script[line_num][0] != ' '))
 		return NULL;
 	
 	// Allocates memory for the question
@@ -176,9 +213,10 @@ Question *createQuestion (char **script, int lineCount, int line_num)
 	q->line_num = line_num;
 	
 	// Quote is not the first line of text by author... (\t..\tQUOTE)
-	if (script[line_num][0] == '\t')
+	if (script[line_num][0] == '\t' || script[line_num][0] == ' ')
 	{
-		while (script[line_num][i] == '\t' || script[line_num][i] == ' ')
+		// Iterate through all the whitespace
+		while (i < LINE_SIZE && isWhiteSpace(script[line_num][i]))
 			i++;
 		
 		// Creates the quote by getting rid of all the previous whitespace
@@ -226,10 +264,13 @@ Question *createQuestion (char **script, int lineCount, int line_num)
 		{
 			q->author[i++] = '\0';
 			
+			// Go through all the whitespace
+			while (i < LINE_SIZE && isWhiteSpace(script[line_num][i]))
+				i++;
+			
+			// Copy the quote
 			for (j = 0; i < LINE_SIZE && script[line_num][i] != '\0'; i++)
 			{
-				if (script[line_num][i] == '\t')
-					continue;
 				q->quote[j++] = script[line_num][i];
 			}
 			// Since there is guaranteed to be at least one ':' previous, this will never overflow
@@ -248,18 +289,18 @@ Question *createQuestion (char **script, int lineCount, int line_num)
 		}
 		
 		// Invalid quote or author beginnings
-		if (!isAlphaNumeric(script[i][0]) && script[i][0] != '\t')
+		if (!isAlphaNumeric(script[i][0]) && (script[i][0] != '\t' || script[i][0] == ' '))
 			continue;
 		
 		// Next quote from the same author
-		if (script[i][0] == '\t')
+		if (script[i][0] == '\t' || script[i][0] == ' ')
 		{
 			// Sets the two authors to be the same
 			strcpy(q->next_author, q->author);
 			
 			j = 0;
 			// Creates the next quote by getting rid of all the previous whitespace
-			while (script[i][j] == '\t' || script[i][j] == ' ')
+			while (j < LINE_SIZE && isWhiteSpace(script[i][j]))
 				j++;
 			for (; j < LINE_SIZE && script[i][j] != '\0'; j++)
 				q->next_quote[k++] = script[i][j];
@@ -284,6 +325,11 @@ Question *createQuestion (char **script, int lineCount, int line_num)
 			{
 				q->next_author[j++] = '\0';
 				
+				// Go through all the whitespace
+				while (j < LINE_SIZE && isWhiteSpace(script[i][j]))
+					j++;
+				
+				// Copies the next quote
 				for (k = 0; j < LINE_SIZE && script[i][j] != '\0'; j++)
 				{
 					if (script[i][j] == '\t')
@@ -298,6 +344,8 @@ Question *createQuestion (char **script, int lineCount, int line_num)
 		}
 	}
 	
+	// Removes trailing whitespace from the quotes
+	removeTrailingWhitespace(q);
 	
 	return q;
 }
@@ -308,40 +356,82 @@ Question *findQuestion (char **script, int lineCount, int diffLineNum)
 {
 	Question *q;
 	char *tmpstr;
-	int line_num;
+	int i, line_num;
 	
 	if (script == NULL)
 		return NULL;
 	
-	// Attempts to create questions from random lines of the script until it is a proper question
-	do
+	// Attempts to create questions from random lines of the script until it is a proper question or a set number of tries occur
+	for (i = 0; q == NULL || i < ATTEMPTS; i++)
 	{
 		// Normal Game Difficulty or creation of original question (the correct answer)
 		if (diffLineNum < 0 || diffLineNum >= lineCount)
 			line_num = rand() % lineCount;
 		// Hard Game Difficulty... Generates quotes within 10 spaces of the diffLineNum
 		else
-			line_num = ((rand() % 20) - 10) + diffLineNum;
-		// Creates the question at line_num
+			line_num = ((rand() % 21) - 10) + diffLineNum;
+		// Creates the question at line_num 
 		q = createQuestion(script, lineCount, line_num);
 	}
-	while (q == NULL);
 	
 	// Returns the found quote
 	return q;
 }
 
+// Returns whether q_choices[i]'s quote is a valid response
+int isValidAnswerChoice (Question *q, Question **q_choices, int i)
+{
+	int j;
+	
+	if (q == NULL || q_choices == NULL || q_choices[i] == NULL)
+		return 0;
+	
+	// Tests if the question and the answer aren't the same, unless if the next quote is the answer
+	if (strcmp(q->quote, (q_choices[i])->next_quote) != 0 || strcmp(q->quote, q->next_quote) == 0 )
+	{
+		// Makes sure the answers are different from the correct answer
+		if (strcmp(q->next_quote, (q_choices[i])->next_quote) != 0)
+		{
+			// Makes sure either the original author or the original quote are different
+			if (strcmp(q->quote, (q_choices[i])->quote) != 0 || strcmp(q->author, (q_choices[i])->author) != 0)
+			{
+				// Checks to make sure no answer choices are repeated
+				for (j = 0; j < i; j++)
+				{
+					if (strcmp((q_choices[j])->next_quote, (q_choices[i])->next_quote) != 0)
+						;
+					else
+						return 0;
+				}
+				// If all conditions are passed, this is a proper answer choice
+				return 1;
+			}
+		}
+	}
+	
+	// Not a valid answer choice
+	return 0;
+}
+
 // Will give a question to the player with given number of responses
 int askQuestion (char **script, int lineCount, int question_num, int num_responses, int diffFlag)
 {
-	Question *q, *q_tmp;
+	Question **q_choices;
+	Question *q;
 	char response;
 	char tmp_response[LINE_SIZE], tmpstr[LINE_SIZE];
 	time_t t;
-	int i, correct_response;
+	int i, j, correct_response;
 	
 	if (script == NULL)
 		return 0;
+	
+	// Allocates memory for question choices and initializes them
+	q_choices = malloc(num_responses * sizeof(Question*));
+	if (q_choices == NULL)
+		return 0;
+	for (i = 0; i < num_responses; i++)
+		q_choices[i] = NULL;
 	
 	// Seed the random number generator
 	srand((unsigned) time(&t));
@@ -361,36 +451,43 @@ int askQuestion (char **script, int lineCount, int question_num, int num_respons
 	{
 		// Prints the correct quote
 		if (i == correct_response)
+		{
+			q_choices[i] = q;
 			printf("%c. %s\n", 'A' + i, q->next_quote);
+		}
 		// Prints other randomly generated quotes
 		else
 		{
-			// Finds a new question and makes sure it isn't the same quote as the actual answer
-			// Also makes sure they dont share the same original quote by the same author
-			while (1)
+			// Finds a new question and checks the validity of the question
+			for (j = 0; j < ATTEMPTS; j++)
 			{
 				// Finds a quote for the other answer choices, determines if difficulty plays a factor or not
-				q_tmp = findQuestion(script, lineCount, diffFlag ? q->line_num : -1);
-				// Makes sure the answers are different
-				if (strcmp(q->next_quote, q_tmp->next_quote) == 0)
+				q_choices[i] = findQuestion(script, lineCount, diffFlag ? q->line_num : -1);
+				
+				// Checks if the generated question is a valid answer choice
+				if (!isValidAnswerChoice(q, q_choices, i))
 				{
-					free(q_tmp);
-					continue;
+					free(q_choices[i]);
+					q_choices[i] = NULL;
 				}
-				// Makes sure either the original author or the original quote are different
-				if (strcmp(q->quote, q_tmp->quote) == 0)
-				{
-					if (strcmp(q->author, q_tmp->author) == 0)
-					{
-						free(q_tmp);
-						continue;
-					}
-				}
+				else
+					break;
+			}
+			
+			// If a question could not be found
+			if (q_choices[i] == NULL)
+			{
+				// If the correct response was already displayed, it will just disregard this and follwing questions
+				if (correct_response < i)
+					break;
+				// Otherwise, the correct answer will be displayed now and then disregard all the following questions
+				printf("%c. %s\n", 'A' + i, q->next_quote);
+				correct_response = i;
 				break;
 			}
-			// Prints the false quotes and frees leftover data
-			printf("%c. %s\n", 'A' + i, q_tmp->next_quote);
-			free(q_tmp);
+			
+			// Prints the incorrect quotes
+			printf("%c. %s\n", 'A' + i, (q_choices[i])->next_quote);
 		}
 	}
 	
@@ -401,8 +498,11 @@ int askQuestion (char **script, int lineCount, int question_num, int num_respons
 	// Gets an answer from the user data
 	response = cleanResponse(tmp_response);
 
-	// Frees question from memory	
-	free(q);
+	// Frees questions from memory	
+	for (i = 0; i < num_responses; i++)
+		if (q_choices[i] != NULL)
+			free(q_choices[i]);
+	free(q_choices);
 	
 	// Prints out result of question
 	if (toLower(response) == 'a' + correct_response)
@@ -414,7 +514,7 @@ int askQuestion (char **script, int lineCount, int question_num, int num_respons
 	return toLower(response) == 'a' + correct_response;
 }
 
-void playQuiz (char *name, char **script, int lineCount, int num_questions, int num_responses, int diffFlag)
+void playQuiz (char **script, int lineCount, char *name, int num_questions, int num_responses, int diffFlag)
 {
 	Question *reward;
 	int i, score = 0;
@@ -423,10 +523,12 @@ void playQuiz (char *name, char **script, int lineCount, int num_questions, int 
 		return;
 	
 	// Opening statement
-	printf("\nWelcome to the %s script quiz!\n", name);
-	printf("This is a %d question quiz where you will be given\n", num_questions);
-	printf("%d possible response%sto a quote from the script.\n", num_responses, num_responses == 1 ? "" : "s ");
+	printf("\nWelcome to Script Quiz!\n\n");
+	printf("This is a %d question quiz where you will be given up\n", num_questions);
+	printf("to %d possible response%sto a quote from the script:\n", num_responses, num_responses == 1 ? "" : "s ");
+	printf("\t%s\n\n", name);
 	printf("Type the corresponding letter to choose your answer. Good luck!\n\n");
+	printf("Difficulty: %s\n\n\n", diffFlag ? "HARD" : "NORMAL");
 	
 	// Gives the player questions, if the player gets it right then their score increases
 	for (i = 0; i < num_questions; i++)
@@ -438,7 +540,7 @@ void playQuiz (char *name, char **script, int lineCount, int num_questions, int 
 	// Reward for scoring at least a 50%
 	if (score * 1.0 / num_questions >= 0.5)
 	{
-		reward = findQuestion(script, lineCount, 0);
+		reward = findQuestion(script, lineCount, -1);
 		printf("Congrats on getting %d correct!\n", score);
 		printf("As a reward... %s has a special message for you...\n", reward->author);
 		printf("\"%s\"\n\n", reward->quote);
@@ -448,10 +550,19 @@ void playQuiz (char *name, char **script, int lineCount, int num_questions, int 
 	return;
 }
 
+// Format of Command Line Arguments:
+// [Exceutable] my_script.txt NumberOfQuestions NumberOfResponses DifficultyFlag(0 for Normal, 1 for Hard)
+// Default values are:
+//   NumOfQuestions: 10
+//   NumOfResponses: 5
+//   Difficulty: NORMAL
 int main (int argc, char **argv)
 {
-	int lineCount;
 	char **script;
+	int lineCount;
+	char *strtol_pntr;
+	// These are the default values for the game
+	int num_questions = 10, num_responses = 5, diffFlag = 0;
 	
 	// Makes sure an argument is given
 	if (argc < 2)
@@ -469,8 +580,34 @@ int main (int argc, char **argv)
 	
 	compileScript(script, argv[1], lineCount);
 	
-	// Plays a 10 question, 5 response quiz, and on hard difficulty
-	playQuiz("BACKSTROKE OF THE WEST", script, lineCount, 10, 5, 1);
+	// Optional command line arguments for gameplay
+	if (argc >= 3)
+	{
+		num_questions = (int)strtol(argv[2], &strtol_pntr, 10);		
+		if (argc >= 4)
+		{
+			num_responses = (int)strtol(argv[3], &strtol_pntr, 10);
+			if (argc >= 5)
+				diffFlag = (int)strtol(argv[4], &strtol_pntr, 10);
+		}
+	}
+	
+	// Restriction on question count
+	if (num_questions < 1)
+		num_questions = 1;
+	// Restriction on response count
+	if (num_responses < 2)
+		num_responses = 2;
+	if (num_responses > 15)
+		num_responses = 15;
+	// Restriction on difficulty flag
+	if (diffFlag < 0)
+		diffFlag = 0;
+	if (diffFlag > 1)
+		diffFlag = 1;
+	
+	// Plays the game with chosen settings
+	playQuiz(script, lineCount, argv[1], num_questions, num_responses, diffFlag);
 	
 	freeScript(script, lineCount);
 	
