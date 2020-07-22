@@ -23,7 +23,7 @@ In linux, compile the scripts_quiz.c into an executable, and then perform the fo
 Format of Scripts
 -----------------
 All scripts that are inputed are expected to be of the following format:
-  * All comment lines begin with "<". ">" is not required at the end of a line but does make it look nicer.
+  * All comment lines begin with "<". ">" is not required at the end of a line but is recommended for clarity.
   * A Character must begin their dialogue with their name, followed by a ":", some number of TABS or SPACES and then their dialogue
   * All subsequent lines of dialogue by character must begin with at least one TAB or SPACE
 
